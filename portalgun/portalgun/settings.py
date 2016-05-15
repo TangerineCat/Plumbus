@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'schedule.apps.ScheduleConfig',
+    'info.apps.InfoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -50,7 +52,7 @@ MIDDLEWARE_CLASSES = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'beanbandits.urls'
+ROOT_URLCONF = 'portalgun.urls'
 
 TEMPLATES = [
     {
@@ -68,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'beanbandits.wsgi.application'
+WSGI_APPLICATION = 'portalgun.wsgi.application'
 
 
 # Database
@@ -77,7 +79,7 @@ WSGI_APPLICATION = 'beanbandits.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'chinese',
+        'NAME': 'plumbus',
         'USER': 'justin',
         'PASSWORD': 'mailman',
         'HOST': 'avery.grotto.ro',
