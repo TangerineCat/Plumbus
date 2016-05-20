@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block title %}Index{% endblock %}
+
+{% block content %}
+
+<div class="banner">
+    <div class="container">
+        <div class="header-text">
+            <p class="big-text">Let's Start The Web Journey</p>
+            <h2>Extant Your Creative Thoughts</h2>
+            <p class="small-text">Extant is a free html5 template designed by <a href="www.html5layouts.com">HTML5 Layouts</a> and released under common creative licence 3.0</p>
+            <div class="button-section">
+                <ul>
+                    <li><a href="#" class="top-button white">Learn More</a></li>
+                    <li><a href="#" class="top-button green">Get Started</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="desc">
+	<div class="container">
+    	<h2>Extant Template Is Responsive</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia mi nulla, in imperdiet arcu hendrerit in. Curabitur ut augue facilisis leo malesuada consequat.</p>
+    </div>
+</div>
+
+<div class="features" id="features">
+	<div class="container">
+    	<h3 class="text-head">Features Of Extant</h3>
+    	<div class="features-section">
+            <ul>
+            	<li>
+                	<div class="feature-icon icon1"></div>
+                 	<h4>Creative Design</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia mi nulla, in imperdiet arcu hendrerit in.</p>
+                 </li>
+                 <li>
+                	<div class="feature-icon icon2"></div>
+                 	<h4>Save Your Time</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia mi nulla, in imperdiet arcu hendrerit in.</p>
+                 </li>
+                 <li>
+                	<div class="feature-icon icon3"></div>
+                 	<h4>Fully Customization</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia mi nulla, in imperdiet arcu hendrerit in.</p>
+                 </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="stories" id="stories">
+	<div class="container">
+    	<h3 class="text-head">Stories Of Extant</h3>
+        <p class="box-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia mi nulla, in imperdiet arcu hendrerit in.</p>
+    	<div class="stories-section">
+        	<ul>
+            	<li>
+                	<a href="#">
+                	<div class="story-img"><img src="{% static "images/story1.png" %}"/></div>
+                    	<div class="story-box">
+                        	<h4>This is Extant</h4>
+                    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia mi nulla, in imperdiet arcu hendrerit in.</p>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                	<div class="story-img"><img src="{% static "images/story2.png" %}"/></div>
+                    	<div class="story-box">
+                        	<h4>This is Awesome</h4>
+                    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia mi nulla, in imperdiet arcu hendrerit in.</p>
+
+                        </div>
+                    </a>
+                </li>
+                <li>
+                	<a href="#">
+                	<div class="story-img"><img src="{% static "images/story3.png" %}"/></div>
+                    	<div class="story-box">
+                        	<h4>This is Mind-blowing</h4>
+                    		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia mi nulla, in imperdiet arcu hendrerit in.</p>
+
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="contact" id="contact">
+	<div class="container">
+    	<h3 class="text-head">Contact At Extant</h3>
+        <p class="box-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacinia mi nulla, in imperdiet arcu hendrerit in.</p>
+    	<div class="contact-section">
+
+        		<form>
+            		<input type="text" name="Name" placeholder="Name" />
+                	<input type="email" name="email" placeholder="Email"/>
+                	<textarea placeholder="Message" rows="6"></textarea>
+                	<button type="submit" class="submit">Send Message</button>
+           		</form>
+
+    	</div>
+    </div>
+</div>
+
+{% endblock %}
