@@ -6,8 +6,11 @@ from . import views
 app_name = 'info'
 
 urlpatterns = [
-    url(r'^$', RedirectView.as_view(url='welcome'), name='welcome'),
-    url(r'^help/', views.welcome, name='help'),
-    url(r'^welcome/', views.welcome, name='welcome'),
+    url(r'^$', RedirectView.as_view(url='welcome')),
+    url(r'^help/', views.help, name='help'),
+    url(r'^welcome/', views.help, name='welcome'),
     url(r'^index/', views.index, name='index'),
+    url(r'^teams/', views.teams, name='teams'),
+    url(r'^badge/', views.badge, name='badge'),
+    url(r'^about/', views.about, name='about'),
 ]

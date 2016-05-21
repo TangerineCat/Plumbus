@@ -20,6 +20,8 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     url(r'^$', auth_views.login),
     url(r'^admin/', admin.site.urls),
+    url(r'^', include('info.urls')),
+    url(r'^', include('schedule.urls')),
     url(r'^info/', include('info.urls')),
     url(r'^schedule/', include('schedule.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),

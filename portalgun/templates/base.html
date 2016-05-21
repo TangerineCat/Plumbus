@@ -30,10 +30,10 @@
         </div>
         <div class="menu" id="navigation">
           <ul>
-            <li><a href="#">Portals</a></li>
-            <li><a href="#features">Team</a></li>
-            <li><a href="#stories">Schedule</a></li>
-            <li><a href="#contact">Help</a></li>
+            <li><a href="{% url "schedule:portal" %}">Portals</a></li>
+            <li><a href="{% url "info:teams" %}">Team</a></li>
+            <li><a href="{% url "schedule:schedule" %}">Schedule</a></li>
+            <li><a href="{% url "info:help" %}">Help</a></li>
           </ul>
         </div>
       </div>
