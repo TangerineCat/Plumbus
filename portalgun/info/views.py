@@ -7,5 +7,9 @@ class IndexView(generic.ListView):
     template_name = 'index.html'
 
 @login_required()
+def welcome(request):
+    return render(request, 'welcome.html')
+
+
 def index(request):
     return render(request, 'index.html')

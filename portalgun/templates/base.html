@@ -18,70 +18,70 @@
 </head>
 
 <body>
-    <div class="header">
-        <div class="container">
-            <div class="logo-menu">
-                <div class="logo">
-                    <h1><a href="/">Portal Gun</a></h1>
-                </div>
-                <!--<a id="simple-menu" href="#sidr">Toggle menu</a>-->
-                <div id="mobile-header">
-<a class="responsive-menu-button" href="#"><img src="{% static "images/11.png" %}" /></a>
-</div>
-                <div class="menu" id="navigation">
-                    <ul>
-                        <li><a href="#">Info</a></li>
-                        <li><a href="#features">Schedule</a></li>
-                        <li><a href="#stories">Badge</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
+  <div class="header">
+    <div class="container">
+      <div class="logo-menu">
+        <div class="logo">
+          <h1><a href="/">Portal Gun</a></h1>
         </div>
+        <!--<a id="simple-menu" href="#sidr">Toggle menu</a>-->
+        <div id="mobile-header">
+          <a class="responsive-menu-button" href="#"><img src="{% static "images/11.png" %}" /></a>
+        </div>
+        <div class="menu" id="navigation">
+          <ul>
+            <li><a href="#">Portals</a></li>
+            <li><a href="#features">Team</a></li>
+            <li><a href="#stories">Schedule</a></li>
+            <li><a href="#contact">Help</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="color-border">
-    </div>
-
+  <div class="color-border">
+  </div>
+  {% block main_content %}{% endblock %}
+  <div class="desc">
     {% block content %}{% endblock %}
-    {% block main_content %}{% endblock %}
-
-    <div class="color-border">
+  </div>
+  <div class="color-border">
+  </div>
+  <div class="footer">
+    <div class="container">
+      <div class="infooter">
+      <p class="copyright">Copyright &copy; Kevin Tang, Jerry Feng, Jessica Cheng, Anthony Chen, Liu Cong, Matthew Cedano 2016 | Template by <a class="credit"href="http://www.html5layouts.com">HTML5 Layouts</a></p>
+      </div>
+      <ul class="socialmedia">
+        <li><a href=""><i class="icon-twitter"></i></a></li>
+        <li><a href=""><i class="icon-facebook"></i></a></li>
+        <li><a href=""><i class="icon-dribbble"></i></a></li>
+        <li><a href=""><i class="icon-linkedin"></i></a></li>
+        <li><a href=""><i class="icon-instagram"></i></a></li>
+      </ul>
     </div>
-    <div class="footer">
-        <div class="container">
-            <div class="infooter">
-            <p class="copyright">Copyright &copy; Kevin Tang, Jerry Feng, Jessica Cheng, Anthony Chen, Liu Cong, Matthew Cedano 2016 | Template by <a class="credit"href="http://www.html5layouts.com">HTML5 Layouts</a></p>
-            </div>
-            <ul class="socialmedia">
-                <li><a href=""><i class="icon-twitter"></i></a></li>
-                <li><a href=""><i class="icon-facebook"></i></a></li>
-                <li><a href=""><i class="icon-dribbble"></i></a></li>
-                <li><a href=""><i class="icon-linkedin"></i></a></li>
-                <li><a href=""><i class="icon-instagram"></i></a></li>
-            </ul>
-        </div>
-    </div>
+  </div>
 
-    <script type="text/javascript" src="{% static "js/jquery.nicescroll.min.js" %}"></script>
-    <script type="text/javascript">
-         $(document).ready(function() {
-            $('#simple-menu').sidr({
-            side: 'right'
-        });
-        });
-        $('.responsive-menu-button').sidr({
-            name: 'sidr-main',
-            source: '#navigation',
-            side: 'right'
+  <script type="text/javascript" src="{% static "js/jquery.nicescroll.min.js" %}"></script>
+  <script type="text/javascript">
+     $(document).ready(function() {
+      $('#simple-menu').sidr({
+      side: 'right'
+    });
+    });
+    $('.responsive-menu-button').sidr({
+      name: 'sidr-main',
+      source: '#navigation',
+      side: 'right'
 
-            });
-        $(document).ready(
-        function() {
-        $("html").niceScroll({cursorborder:"0px solid #fff",cursorwidth:"5px",scrollspeed:"70"});
-        }
-        );
-    </script>
+      });
+    $(document).ready(
+    function() {
+    $("html").niceScroll({cursorborder:"0px solid #fff",cursorwidth:"5px",scrollspeed:"70"});
+    }
+    );
+  </script>
 
 </body>
 </html>

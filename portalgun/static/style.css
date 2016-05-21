@@ -109,7 +109,7 @@ table {
 }
 .banner
 {
-	background: url(images/picjumbo-bg5.png) no-repeat fixed 0% 0%/cover;
+	background: url(images/picjumbo-bg5.png) no-repeat fixed 15% 0%/cover;
 	padding: 150px 0px;
 	cursor: default;
 }
@@ -218,6 +218,31 @@ table {
 {
 	text-align: center;
 }
+
+.features-section li
+{
+	padding-bottom: 30px;
+}
+
+.features p
+{
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 30px;
+	margin: 0 auto;
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	text-align: justify-a;;
+}
+
+.features p.big-text
+{
+	text-align: center;
+	font-size: 28px;
+	line-height: 50px;
+	font-weight: 400;
+}
+
 h3.text-head
 {
 	color: #1c97ca;
@@ -265,6 +290,14 @@ p.box-desc
 {
 	background-position: -136px -1px;
 }
+
+.caution
+{
+	background:url(images/caution.png) no-repeat center left;
+	display:inline-block;
+	padding: 40px 80px;
+}
+
 .features-section ul li h4
 {
 	font-size: 17px;

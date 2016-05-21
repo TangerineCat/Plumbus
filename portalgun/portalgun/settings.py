@@ -26,7 +26,10 @@ SECRET_KEY = 'mh+40*yvjyle*w2(0h*jgni9e0&$*%448^du_&=haa%@c^29wt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '.avery.grotto.ro',
+    '.getschwifty2016.com',
+]
 
 
 # Application definition
