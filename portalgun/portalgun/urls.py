@@ -19,7 +19,7 @@ from django.contrib.auth import views as auth_views
 from django.conf import settings
 from django.conf.urls.static import static
 
-# from revproxy.views import ProxyView
+from revproxy.views import ProxyView
 
 urlpatterns = [
     url(r'^$', auth_views.login),
@@ -29,7 +29,7 @@ urlpatterns = [
     url(r'^info/', include('info.urls')),
     url(r'^schedule/', include('schedule.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
-    # url(r'^(?P<path>.*)$', ProxyView.as_view(upstream='http://getschwifty2016.com/')),
+    url(r'^(?P<path>.*)$', ProxyView.as_view(upstream='http://getschwifty2016.com/')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
