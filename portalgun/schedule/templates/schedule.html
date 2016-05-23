@@ -1,78 +1,34 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-{% block title %}Portal Gun | Help{% endblock %}
+{% block title %}Portal Gun | Schedule{% endblock %}
 
 {% block main_content %}
 
-<div class="banner">
-    <div class="container">
-        <div class="header-text">
-            <p class="big-text">Welcome to Rick and Morty the Stack!</p>
-            <h2>I am your portal gun</h2>
-            <p class="small-text">I am here to guide you throughout your journey. Click the buttons to quickly navigate to the relevant sections</p>
-            <div class="button-section">
-                <ul>
-                    <li><a href="#portal" class="top-button white">Portals</a></li>
-                    <li><a href="#team" class="top-button white">Your Team</a></li>
-                    <li><a href="#schedule" class="top-button white">Schedule</a></li>
-                    <li><a href="#help" class="top-button white">Help</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="desc" id="portal">
-	<div class="container">
-    	<h2>Your Journey Begins One Dimmension at a Time</h2>
-        <p>There are tons of universes for you to visit. However you will need to enter the coordinates for the Portal gun to tell you how to get to the location. Make sure to follow all directions.</p>
-    </div>
-</div>
-
-<div class="features" id="team">
-	<div class="container">
-    	<h3 class="text-head">Your Team</h3>
-    	<div class="features-section">
-            <ul>
-            	<li>
-                	<div class="feature-icon icon1"></div>
-                 	<h4>Rick Sanchez</h4>
-                    <p>Rick Sanchez is a genius scientist whose alcoholism and reckless, sociopathic behavior are a source of concern for his family. He is Morty and Summer's grandpa.</p>
-                 </li>
-                 <li>
-                	<div class="feature-icon icon2"></div>
-                 	<h4>Morty Smith</h4>
-                    <p>Morty is a teenage boy who often gets dragged into adventures with his grandpa Rick. Although not very smart, Morty has a big heart.</p>
-                 </li>
-                 <li>
-                	<div class="feature-icon icon3"></div>
-                 	<h4>Summer Smith (Overflow)</h4>
-                    <p>Summer is your average teenage girl who happens to also get dragged along with Rick and Morty on their daring adventures. Summer is found always on her phone and cares quite a bit about being popular.</p>
-                 </li>
-            </ul>
-            <p>Each team has a specific characteristics. You can learn more about your team by pressing the team button in the menu.</p>
-        </div>
-        <div class="caution">
-            <p class="big-text">If you see this sign, the info is confidential! Don't show other teams!</p>
-        </div>
-    </div>
-</div>
-
 <div class="stories" id="stories">
-	<div class="container">
-    	<h3 class="text-head">The Schedule</h3>
-        <p class="box-desc">The schedule will be the one stop place to find information about places you have visited, and where you should visit next. Keep checking this tab for updates
+  <div class="container">
+    <h3 class="text-head">The Schedule</h3>
+    <p>The schedule will be the one stop place to find information about places you have visited, and where you should visit next. Keep checking this tab for updates</p>
+    <div class="stories-section">
+      <ul>
+      {% for event in eventlist %}
+        <li>
+          {% if event.image %}
+          <div class="story-img">
+            <img src="{{ MEDIA-URL }}{{ event.image.url }}" />
+          </div>
+          {% endif %}
+          <div class="story-box">
+            <h4>{{ event.name }}</h4>
+            <p>Location: {{ event.location }}</p>
+            <p>Time: {{ event.time }} to {{ event.time + event.duration }}</p>
+            <p>{{ event.description }}<p>
+          </div>
+        </li>
+      </ul>
     </div>
+  </div>
 </div>
 
-<div class="contact" id="help">
-	<div class="container">
-    	<h3 class="text-head">Get Help</h3>
-        <p class="box-desc">If you ever need to refer back to this page again, go to this page, click the help button in the .</p>
-        <h3 class="text-head">Contact Us</h3>
-        <p class="box-desc">
-    </div>
-</div>
 
 {% endblock %}

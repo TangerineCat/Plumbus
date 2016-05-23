@@ -35,11 +35,11 @@
 	{
 		font-size: 22px;
 	}
-	.header-text h2 
+	.header-text h2
 	{
     	font-size: 34px;
 	}
-	.small-text 
+	.small-text
 	{
     	width: 85%;
     	margin: 0px auto;
@@ -55,7 +55,7 @@
     	width: 242px;
 	}
 	.features-section ul li p {
-   
+
     	font-size: 14px;
     	width: 95%;
 	}
@@ -66,10 +66,10 @@
 	font-family: 'Open Sans', sans-serif;
 	}
 }
-@media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
-and (orientation : landscape) 
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
 {
 	.container
 	{
@@ -84,11 +84,11 @@ and (orientation : landscape)
 	{
 		font-size: 22px;
 	}
-	.header-text h2 
+	.header-text h2
 	{
     	font-size: 34px;
 	}
-	.small-text 
+	.small-text
 	{
     	width: 85%;
     	margin: 0px auto;
@@ -104,7 +104,7 @@ and (orientation : landscape)
     	width: 242px;
 	}
 	.features-section ul li p {
-   
+
     	font-size: 14px;
     	width: 95%;
 	}
@@ -160,7 +160,7 @@ and (orientation : landscape)
 		.stories-section ul li {
    	 		float: none;;
    	 		margin: 40px auto;
-		}	
+		}
 		.features {
     		padding: 140px 0px;
 		}
@@ -169,7 +169,7 @@ and (orientation : landscape)
 		}
 		.contact {
     		padding: 140px 0px;
-    
+
 		}
 }
 @media (min-width: 480px) and (max-width: 640px)
@@ -218,7 +218,7 @@ and (orientation : landscape)
 		.stories-section ul li {
    	 		float: none;;
    	 		margin: 40px auto;
-		}	
+		}
 		.features {
     		padding: 140px 0px;
 		}
@@ -227,7 +227,7 @@ and (orientation : landscape)
 		}
 		.contact {
     		padding: 140px 0px;
-    
+
 		}
 }
 @media (min-width: 20px) and (max-width: 480px)
@@ -298,7 +298,7 @@ and (orientation : landscape)
 			width: 260px;
 		}
 		.story-img img {
-    		height: 170px;
+    		height: 260px;
     		width: 260px;
 		}
 		.features {
@@ -309,7 +309,7 @@ and (orientation : landscape)
 		}
 		.contact {
     		padding: 140px 0px;
-    
+
 		}
 		.contact-section {
     		width: 80%;

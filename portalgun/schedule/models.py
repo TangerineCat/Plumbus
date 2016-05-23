@@ -1,14 +1,15 @@
 from __future__ import unicode_literals
 
 from django.db import models
-from info.models import Team
+from django.contrib.auth.models import User
 
 
 class Event(models.Model):
     name = models.CharField(max_length=100)
     time = models.TimeField()
+    duration = models.DurationField()
     location = models.CharField(max_length=100)
-    password = models.CharField(max_length=10, blank=True)
+    password = models.CharField(max_length=20, blank=True)
     description = models.TextField(null=True, blank=True)
     successtext = models.TextField(null=True, blank=True)
     event_img = models.ImageField(upload_to='images/events/',
@@ -23,9 +24,9 @@ class Event(models.Model):
 
 
 class Schedule(models.Model):
-    user = models.ManyToManyField(Team)
+    user = models.ForeignKey(User, primary_key=True)
     event = models.ManyToManyField(Event)
     revealed = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.user + 'at' + self.event
+        return str(self.event)

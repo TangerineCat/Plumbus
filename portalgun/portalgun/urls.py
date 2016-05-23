@@ -16,6 +16,10 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.contrib.auth import views as auth_views
+from django.conf import settings
+from django.conf.urls.static import static
+
+# from revproxy.views import ProxyView
 
 urlpatterns = [
     url(r'^$', auth_views.login),
@@ -25,4 +29,7 @@ urlpatterns = [
     url(r'^info/', include('info.urls')),
     url(r'^schedule/', include('schedule.urls')),
     url(r'^accounts/', include('registration.backends.simple.urls')),
+    # url(r'^(?P<path>.*)$', ProxyView.as_view(upstream='http://getschwifty2016.com/')),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

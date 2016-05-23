@@ -37,8 +37,12 @@ class Alignment(models.Model):
                                   null=True,
                                   blank=True)
 
+    def getAlignment(self):
+        return [t[1] for t in self.ALIGNMENT_CHOICES
+                if t[0] == self.alignment][0]
+
     def __str__(self):
-        return self.alignment
+        return self.getAlignment()
 
 
 class Identity(models.Model):
@@ -50,4 +54,4 @@ class Identity(models.Model):
     schmeckles = models.IntegerField(default=0)
 
     def __str__(self):
-        return self.user
+        return str(self.user)

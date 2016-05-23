@@ -12,19 +12,40 @@ class IndexView(generic.ListView):
 def index(request):
     return render(request, 'index.html')
 
+
 @login_required()
 def teams(request):
     user = request.user
+    context = {}
+    identitylist = Identity.objects.filter(user=user)
+    if not identitylist:
+        # user does not have identity
+        print 'no identity'
+        pass
+    elif len(identitylist) > 1:
+        # non-unique user
+        print 'non-unique user\n'
+        pass
+    else:
+        identity = identitylist.select_related('team', 'alignment').get()
+        showhidden = identity.alignment.alignment != 'N'
+        context = {'identity': identity, 'showhidden': showhidden}
 
-    context={}
     return render(request, 'teams.html', context)
+
 
 @login_required()
 def help(request):
     return render(request, 'help.html')
 
+
 @login_required()
 def badge(request):
+    user = request.user
+    context = {}
+    identitylist = Identity.objects.filter(user=user)
+    identity = identitylist.select_related('alignment').get()
+    context = {'identity': identity}
     return render(request, 'badge.html')
 
 def about(request):
