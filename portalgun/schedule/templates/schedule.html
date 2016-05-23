@@ -11,19 +11,19 @@
     <p>The schedule will be the one stop place to find information about places you have visited, and where you should visit next. Keep checking this tab for updates</p>
     <div class="stories-section">
       <ul>
-      {% for event in eventlist.objects %}
+      {% for item in eventlist %}
         <li>
-          {% if event.image %}
+          {% if item.event.event_img %}
           <div class="story-img">
-            <img src="{{ MEDIA_URL }}{{ event.image.url }}" />
+            <img src="{{ item.event.event_img.url }}" />
           </div>
           {% endif %}
           <div class="story-box">
-            <h4>{{ event.name }}</h4>
-            <p>Location: {{ event.location }}</p>
-            <p>Time: {{ event.time }} </p>
-            <p>Duration: {{ event.duration }}</p>
-            <p>{{ event.description }}<p>
+            <h4>{{ item.event.name }}</h4>
+            <p>Location: {{ item.event.location }}</p>
+            <p>Time: {{ item.event.time }} </p>
+            <p>Duration: {{ item.event.duration }}</p>
+            <p>{{ item.event.description }}<p>
           </div>
         </li>
         {% endfor %}

@@ -1,14 +1,15 @@
 from django.shortcuts import render
 from django.contrib.auth.decorators import login_required
 
-from .models import Event, Schedule
+from .models import Schedule
 
 
 @login_required()
 def schedule(request):
     user = request.user
     context = {}
-    eventlist = Schedule.objects.filter(user=user).filter(revealed=True).select_related('event')
+    eventlist = Schedule.objects.filter(user=user).filter(
+        revealed=True).select_related('event').order_by('event__time')
     context = {'eventlist': eventlist}
     return render(request, 'schedule.html', context)
 

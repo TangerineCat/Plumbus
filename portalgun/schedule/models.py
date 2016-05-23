@@ -24,8 +24,8 @@ class Event(models.Model):
 
 
 class Schedule(models.Model):
-    user = models.ForeignKey(User)
-    event = models.ForeignKey(Event)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    event = models.ForeignKey(Event, on_delete=models.CASCADE)
     revealed = models.BooleanField(default=False)
 
     def __str__(self):
