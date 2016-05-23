@@ -24,7 +24,7 @@ class Event(models.Model):
 
 
 class Schedule(models.Model):
-    user = models.ForeignKey(User, primary_key=True)
+    user = models.OneToOneField(User, primary_key=True)
     event = models.ManyToManyField(Event)
     revealed = models.BooleanField(default=False)
 
