@@ -15,16 +15,17 @@
         <li>
           {% if event.image %}
           <div class="story-img">
-            <img src="{{ MEDIA-URL }}{{ event.image.url }}" />
+            <img src="{{ MEDIA_URL }}{{ event.image.url }}" />
           </div>
           {% endif %}
           <div class="story-box">
             <h4>{{ event.name }}</h4>
             <p>Location: {{ event.location }}</p>
-            <p>Time: {{ event.time }} to {{ event.time + event.duration }}</p>
+            <p>Time: {{ event.time }} to {{ event.time|add:event.duration}}</p>
             <p>{{ event.description }}<p>
           </div>
         </li>
+        {% endfor %}
       </ul>
     </div>
   </div>

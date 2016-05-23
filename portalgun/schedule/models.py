@@ -25,8 +25,8 @@ class Event(models.Model):
 
 class Schedule(models.Model):
     user = models.OneToOneField(User, primary_key=True)
-    event = models.ManyToManyField(Event)
+    event = models.ForeignKey(Event)
     revealed = models.BooleanField(default=False)
 
     def __str__(self):
-        return str(self.event)
+        return str(self.user)

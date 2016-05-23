@@ -9,6 +9,8 @@ def schedule(request):
     user = request.user
     context = {}
     eventlist = Schedule.objects.filter(user=user).filter(revealed=True).order_by('time')
+    for i in eventlist:
+        print 1
     context = {'eventlist': eventlist}
     return render(request, 'schedule.html')
 
