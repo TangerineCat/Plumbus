@@ -8,11 +8,9 @@ from .models import Event, Schedule
 def schedule(request):
     user = request.user
     context = {}
-    eventlist = Schedule.objects.filter(user=user).filter(revealed=True).order_by('time')
-    for i in eventlist:
-        print 1
+    eventlist = Schedule.objects.filter(user=user).filter(revealed=True)
     context = {'eventlist': eventlist}
-    return render(request, 'schedule.html')
+    return render(request, 'schedule.html', context)
 
 
 @login_required()

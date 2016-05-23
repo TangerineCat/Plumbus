@@ -21,7 +21,8 @@
           <div class="story-box">
             <h4>{{ event.name }}</h4>
             <p>Location: {{ event.location }}</p>
-            <p>Time: {{ event.time }} to {{ event.time|add:event.duration}}</p>
+            <p>Time: {{ event.time }} </p>
+            <p>Duration: {{ event.duration }}</p>
             <p>{{ event.description }}<p>
           </div>
         </li>
