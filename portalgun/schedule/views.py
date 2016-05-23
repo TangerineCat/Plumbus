@@ -8,7 +8,7 @@ from .models import Event, Schedule
 def schedule(request):
     user = request.user
     context = {}
-    eventlist = Schedule.objects.filter(user=user).filter(revealed=True)
+    eventlist = Schedule.objects.filter(user=user).filter(revealed=True).select_related('event')
     context = {'eventlist': eventlist}
     return render(request, 'schedule.html', context)
 

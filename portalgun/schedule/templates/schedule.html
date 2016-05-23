@@ -11,7 +11,7 @@
     <p>The schedule will be the one stop place to find information about places you have visited, and where you should visit next. Keep checking this tab for updates</p>
     <div class="stories-section">
       <ul>
-      {% for event in eventlist %}
+      {% for event in eventlist.objects %}
         <li>
           {% if event.image %}
           <div class="story-img">
