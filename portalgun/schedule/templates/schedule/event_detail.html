@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}{{object.name}}{% endblock %}
+{% block main_content %}
+    <div class="features">
+        <div class="container">
+            <h2 class="detail-head">{{ object.name }}</h2>
+            {% if object.event_img %}
+                <img class="detail-img" src="{{ MEDIA_URL }}{{ object.event_img.url }}"/>
+            {% endif %}
+            <p>Location: {{ object.location }}</p>
+            <p>Time: {{ object.time }} </p>
+            <p>Duration: {{ object.duration }}</p>
+            <p>{{ object.description }}</p>
+        </div>
+    </div>
+{% endblock %}

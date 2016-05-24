@@ -46,7 +46,7 @@ def badge(request):
     identitylist = Identity.objects.filter(user=user)
     identity = identitylist.select_related('alignment').get()
     context = {'identity': identity}
-    return render(request, 'badge.html')
+    return render(request, 'badge.html', context)
 
 def about(request):
     return render(request, 'about.html')

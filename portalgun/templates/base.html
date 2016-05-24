@@ -22,7 +22,7 @@
     <div class="container">
       <div class="logo-menu">
         <div class="logo">
-          <h1><a href="/">Portal Gun</a></h1>
+          <h1><a href="/welcome/">Portal Gun</a></h1>
         </div>
         <!--<a id="simple-menu" href="#sidr">Toggle menu</a>-->
         <div id="mobile-header">
@@ -43,9 +43,11 @@
   <div class="color-border">
   </div>
   {% block main_content %}{% endblock %}
+  {% if content %}
   <div class="desc">
     {% block content %}{% endblock %}
   </div>
+  {% endif %}
   <div class="color-border">
   </div>
   <div class="footer">
@@ -55,10 +57,10 @@
       <p class="copyright"><a href={% url "info:about" %}>About this stack</a></p>
       </div>
       <ul class="socialmedia">
-        <li><a href=""><i class="icon-twitter"></i></a></li>
-        <li><a href=""><i class="icon-facebook"></i></a></li>
-        <li><a href=""><i class="icon-linkedin"></i></a></li>
-        <li><a href=""><i class="icon-instagram"></i></a></li>
+        <li><a href="{% url "schedule:portal" %}"><i class="icon-twitter"></i></a></li>
+        <li><a href="{% url "info:teams" %}"><i class="icon-facebook"></i></a></li>
+        <li><a href="{% url "schedule:schedule" %}"><i class="icon-linkedin"></i></a></li>
+        <li><a href="{% url "info:help" %}"><i class="icon-instagram"></i></a></li>
       </ul>
     </div>
   </div>
