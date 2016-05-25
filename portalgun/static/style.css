@@ -95,6 +95,7 @@ table {
 .portal {
 	background: url(images/picjumbo-bg5.png) no-repeat fixed;
 	background-position: 45% 0px;
+	background-repeat: repeat-x;
 	padding: 150px 0px;
 	cursor: default;
 }
@@ -195,6 +196,7 @@ strong {
 	margin: 0 auto;
 	font-family: 'Open Sans', sans-serif;
 	color: #aab1bf;
+	padding-bottom: 10px;
 }
 .features {
 	padding: 80px 0px;
@@ -235,8 +237,9 @@ p.box-desc {
 	font-size: 17px;
 	font-weight: 500;
 	font-family: 'Open Sans', sans-serif;
-	line-height: 60px;
+	line-height: 30px;
 	text-align: center;
+	padding-bottom: 10px
 }
 .features-section ul {
 	margin: 50px 0px;
@@ -262,10 +265,15 @@ p.box-desc {
 .icon3 {
 	background-position: -136px -1px;
 }
+.team-img {
+	max-height: 500;
+	max-width: 90%;
+	width: auto;
+}
 .caution {
 	background: url(images/caution.png) no-repeat center left;
 	display: inline-block;
-	padding: 40px 80px;
+	padding: 40px 0px 80px 80px;
 }
 .features-section ul li h4 {
 	font-size: 17px;

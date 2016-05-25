@@ -27,12 +27,15 @@ def portal(request):
         # check whether it's valid:
         if form.is_valid():
             dimmension = form.cleaned_data['dimmension']
-            event = Event.objects.filter(password=dimmension).get()
-            schedule = Schedule.objects.filter(
-                event=event).filter(user=request.user).get()
-            schedule.revealed = True
-            schedule.save()
-            return HttpResponseRedirect('/event/' + str(event.id))
+            event = Event.objects.filter(password=dimmension)
+            if event:
+                schedule = Schedule.objects.filter(
+                    event=event).filter(user=request.user).get()
+                schedule.revealed = True
+                schedule.save()
+                return HttpResponseRedirect('/event/' + str(event.id))
+            else:
+                form.add_error('dimmension', 'That dimmension does not exist!')
 
     # if a GET (or any other method) we'll create a blank form
     else:

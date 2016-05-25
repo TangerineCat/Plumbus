@@ -8,9 +8,9 @@
 <div class="desc">
 	<div class="container">
     	<h2>Team {{ identity.team.name }}</h2>
-        <img src="{{ MEDIA_URL }}{{ identity.team.team_img.url }}" />
-        <p>{{ identity.team.description }}</p>
-        <p>{{ identity.team.goal }}</p>
+        <img class="team-img" src="{{ MEDIA_URL }}{{ identity.team.team_img.url }}" />
+        <p class="box-desc">{{ identity.team.description }}</p>
+        <p class="box-desc">{{ identity.team.goal }}</p>
 
     </div>
 </div>

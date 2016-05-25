@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 
-{% block title %}Portal Gun | Help{% endblock %}
+{% block title %}Portal Gun | Welcome{% endblock %}
 
 {% block main_content %}
 <div>
@@ -10,13 +10,12 @@
         <div class="header-text">
             <p class="big-text">Welcome to Rick and Morty the Stack!</p>
             <h2>I am your portal gun</h2>
-            <p class="small-text">I am here to guide you throughout your journey. Click the buttons to quickly navigate to the relevant sections</p>
+            <p class="small-text">I am here to guide you throughout your journey. Click the buttons to quickly navigate to the relevant pages</p>
             <div class="button-section">
                 <ul>
-                    <li><a href="#portal" class="top-button white">Portals</a></li>
-                    <li><a href="#team" class="top-button white">Your Team</a></li>
-                    <li><a href="#schedule" class="top-button white">Schedule</a></li>
-                    <li><a href="#help" class="top-button white">Help</a></li>
+                    <li><a href="{% url "schedule:portal" %}" class="top-button white">Portals</a></li>
+                    <li><a href="{% url "info:teams" %}" class="top-button white">Your Team</a></li>
+                    <li><a href="{% url "schedule:schedule" %}" class="top-button white">Schedule</a></li>
                 </ul>
             </div>
         </div>
@@ -26,7 +25,9 @@
 <div class="desc" id="portal">
 	<div class="container">
     	<h2>Your Journey Begins One Dimmension at a Time</h2>
-        <p>There are tons of universes for you to visit. However you will need to enter the coordinates for the Portal gun to tell you how to get to the location. Make sure to follow all directions. To do this, click <strong>portal</strong> in the menu</p>
+        <p>There are tons of universes for you to visit. However you will need to enter the coordinates for the Portal gun to tell you how to get to the location. To do this, click <strong>PORTAL</strong> in the menu</p>
+        <p>Throughout your adventures, you will find new dimmensions to go to. Simply enter the dimmension name into the portal gun and press go! You cannot travel to a dimmension that you don't know yet. Make sure to read the instructions of each activity carefully<p>
+        <p>To review the dimmensions you've unlocked, go to <strong>SCHEDULE</strong> in the menu.</p>
     </div>
 </div>
 
@@ -51,7 +52,7 @@
                     <p>Summer is your average teenage girl who happens to also get dragged along with Rick and Morty on their daring adventures. Summer is found always on her phone and cares quite a bit about being popular.</p>
                  </li>
             </ul>
-            <p>Each team has a specific characteristics. You can learn more about your team by selecting <strong>team</strong> from the menu.</p>
+            <p>Each team has a specific characteristics. You can learn more about your team by selecting <strong>TEAM</strong> from the menu.</p>
         </div>
         <div class="caution">
             <p class="big-text">If you see this sign, the info is confidential! Don't show this information to other teams!</p>
@@ -59,7 +60,7 @@
     </div>
 </div>
 
-<div class="stories" id="stories">
+<div class="stories" id="schedule">
 	<div class="container">
     	<h3 class="text-head">The Schedule</h3>
         <p class="box-desc">The <strong>schedule</strong> will be the one stop place to find information about places you have visited, and where you should visit next. </p>
@@ -70,7 +71,7 @@
 <div class="contact" id="help">
 	<div class="container">
     	<h3 class="text-head">Get Help</h3>
-        <p class="box-desc">If you ever need to refer back to this page again, go to this page, click the <strong>help</strong> button in the menu.</p>
+        <p class="box-desc">If you ever need to refer back to this page again, go to this page, click the logo up top.
         <p class="box-desc"> If you're really lost, contact one of the contacts below, or meet back up at the Tavern and ask help from the tavernkeeper</p>
         <div class="stories-section">
             <ul>
@@ -96,12 +97,12 @@
                     </a>
                 </li>
                 <li>
-                    <a href="tel:+8008135">
+                    <a href="tel:+18702991157">
                     <div class="story-img"><img src="{% static "images/story3.png" %}"/></div>
                         <div class="story-box">
                             <h4>Jessica</h4>
                             <p>Jessica is an attractive high school Student and Morty's love interest. It's too bad she barely knows that Morty exists</p>
-                            <p>Jcheng can i have ur numba</p>
+                            <p>870-299-1157</p>
 
                         </div>
                     </a>

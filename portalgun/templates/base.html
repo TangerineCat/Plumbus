@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% block title %}Tagging Exploration{% endblock %}</title>
+<title>{% block title %}Portal Gun{% endblock %}</title>
 <link rel="stylesheet" type="text/css" href="{% static "style.css" %}"/>
 <link href='http://fonts.googleapis.com/css?family=Raleway:400,200,300,600,700,800' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300,200' rel='stylesheet' type='text/css'>
@@ -22,7 +22,7 @@
     <div class="container">
       <div class="logo-menu">
         <div class="logo">
-          <h1><a href="/welcome/">Portal Gun</a></h1>
+          <h1><a href="{% url "info:welcome" %}">Portal Gun</a></h1>
         </div>
         <!--<a id="simple-menu" href="#sidr">Toggle menu</a>-->
         <div id="mobile-header">
@@ -33,7 +33,7 @@
             <li><a href="{% url "schedule:portal" %}">Portals</a></li>
             <li><a href="{% url "info:teams" %}">Team</a></li>
             <li><a href="{% url "schedule:schedule" %}">Schedule</a></li>
-            <li><a href="{% url "info:help" %}">Help</a></li>
+            <li><a href="/accounts/logout/">Logout</a></li>
           </ul>
         </div>
       </div>
