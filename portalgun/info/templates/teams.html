@@ -9,8 +9,8 @@
 	<div class="container">
     	<h2>Team {{ identity.team.name }}</h2>
         <img class="team-img" src="{{ MEDIA_URL }}{{ identity.team.team_img.url }}" />
-        <p class="box-desc">{{ identity.team.description }}</p>
-        <p class="box-desc">{{ identity.team.goal }}</p>
+        <p class="box-desc">{{ identity.team.description|linebreaks }}</p>
+        <p class="box-desc">{{ identity.team.goal|linebreaks }}</p>
 
     </div>
 </div>
@@ -20,8 +20,8 @@
     <div class="container">
         <div class="caution">
             <h3 class="text-head">Alignment: {{ identity.alignment }}</h3>
-            <p> {{ identity.alignment.description }}</p>
-            <p> {{ identity.alignment.goal }}</p>
+            <p> {{ identity.alignment.description|linebreaks }}</p>
+            <p> {{ identity.alignment.goal|linebreaks }}</p>
 
         </div>
         <div class="button-section"><div class="header-text">

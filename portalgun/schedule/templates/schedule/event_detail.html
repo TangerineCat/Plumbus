@@ -10,7 +10,7 @@
             <p>Location: {{ object.location }}</p>
             <p>Time: {{ object.time }} </p>
             <p>Duration: {{ object.duration }}</p>
-            <p>{{ object.description }}</p>
+            <p>{{ object.description|linebreaks }}</p>
         </div>
     </div>
 {% endblock %}
