@@ -213,7 +213,8 @@ strong {
 .features p {
 	font-size: 18px;
 	font-weight: 400;
-	line-height: 30px;
+	line-height: 20px;
+	padding-bottom: 20px;
 	margin: 0 auto;
 	font-family: 'Open Sans', sans-serif;
 	color: #fff;
