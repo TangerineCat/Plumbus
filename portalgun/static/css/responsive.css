@@ -205,7 +205,7 @@ and (orientation:landscape) {
 }
 @media (min-width:20px) and (max-width:480px) {
     .container {
-        width: 420px;
+        width: 350px;
         margin: 0 auto;
         padding: 0px 20px;
     }
@@ -245,6 +245,7 @@ and (orientation:landscape) {
     }
     .caution {
         padding-left: 35;
+        background-position: top left;
     }
     .features-section ul li {
         display: block;
