@@ -13,7 +13,7 @@
     <div class="contact-section">
       <form method="post" action="?next={{ next|default:"/" }}">{% csrf_token %}
         {% if form.username.errors %} <span class="error"> {{ form.username.errors|join:", " }}</span>{% endif %}
-        <input id="id_username" maxlength="254" name="username" type="text" placeholder="Username" />
+        <input id="id_username" maxlength="25" name="username" type="text" placeholder="Username" autocorrect="off" autocapitalize="off"/>
         {% if form.password.errors %}<span class="error">{{ form.password.errors|join:", " }}</span>{% endif %}
         <input id="id_password" name="password" type="password" placeholder="Password" autocorrect="off" autocapitalize="off" maxlength="25"/>
         <button type="submit" class="submit">Login</button>
