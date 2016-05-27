@@ -26,7 +26,7 @@ def portal(request):
         form = PortalForm(request.POST)
         # check whether it's valid:
         if form.is_valid():
-            dimmension = form.cleaned_data['dimmension']
+            dimmension = form.cleaned_data['dimmension'].lower()
             event = Event.objects.filter(password=dimmension)
             if event:
                 schedule = Schedule.objects.filter(
