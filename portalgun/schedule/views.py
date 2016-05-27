@@ -33,7 +33,7 @@ def portal(request):
                     event=event).filter(user=request.user).get()
                 schedule.revealed = True
                 schedule.save()
-                return HttpResponseRedirect('/event/' + str(event.id))
+                return HttpResponseRedirect('/event/' + str(event.get().id))
             else:
                 form.add_error('dimmension', 'That dimmension does not exist!')
 
