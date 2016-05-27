@@ -197,6 +197,7 @@ strong {
 	font-family: 'Open Sans', sans-serif;
 	color: #aab1bf;
 	padding-bottom: 10px;
+	co
 }
 .features {
 	padding: 80px 0px;
@@ -218,7 +219,6 @@ strong {
 	margin: 0 auto;
 	font-family: 'Open Sans', sans-serif;
 	color: #fff;
-	text-align: justify-a;
 }
 .features p.big-text {
 	text-align: center;
@@ -272,9 +272,14 @@ p.box-desc {
 	width: auto;
 }
 .caution {
-	background: url(images/caution.png) no-repeat center left;
 	display: inline-block;
-	padding: 40px 0px 80px 80px;
+	padding: 40px 0px 80px 0px;
+}
+.caution img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
 }
 .features-section ul li h4 {
 	font-size: 17px;
