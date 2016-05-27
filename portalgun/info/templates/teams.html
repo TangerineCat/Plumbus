@@ -19,7 +19,7 @@
 <div class="features" id="features">
     <div class="container">
         <div class="caution">
-            <img src="../../static/images/caution.png">
+            <img src="{% static "images/caution.png" %}"/>
             <h3 class="text-head">Alignment: {{ identity.alignment }}</h3>
             <p>{{ identity.alignment.description|linebreaks }}</p>
             <p>{{ identity.alignment.goal|linebreaks }}</p>
